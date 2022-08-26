@@ -1,17 +1,32 @@
 {% extends '_base.njk' %}
 
 
-{% block title %}Index page{% endblock %}
+{% block title %}REST Countries{% endblock %}
 
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col p-4">
-                <p class="display-1">It works!</p>
-                <h1>This a basic template to start a website based on Bootstrap&nbsp;{{ bootstrapVersion }}</h1>
-                <p>Also check out <a href="example-page-1" class="btn btn-success btn-lg">Example page 1</a> and <a href="example-page-2" class="btn btn-danger btn-lg">Example page 2</a>.</p>
-            </div>
+    <header>
+        <div class="container">
+            <h1>Where in the world?</h1>
+            <p>Dark Mode</p>
         </div>
-    </div>
+    </header>
+    <section class="search-country">
+    <form>
+        <input type="text" name="search" id="inputSearch" placeholder="Search for a country..."/>
+    </form>
+    <select>
+        <option value="Filter">Filter by Region</option>
+        <option value="Africa">Africa</option>
+        <option value="America">America</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+    </select>
+    </section>
+
+    <div class="js-countries"></div>
+
+
+    <script src="js/custom.js"></script>
 {% endblock %}
