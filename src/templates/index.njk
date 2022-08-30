@@ -11,11 +11,11 @@
             <p>Dark Mode</p>
         </div>
     </header>
-    <section class="search-country">
+    <section class="container">
     <form>
-        <input type="text" name="search" id="inputSearch" placeholder="Search for a country..."/>
+        <input type="text" name="search" class="search" id="inputSearch" placeholder="Search for a country..."/>
     </form>
-    <select>
+    <select class="filter">
         <option value="Filter">Filter by Region</option>
         <option value="Africa">Africa</option>
         <option value="America">America</option>
@@ -25,7 +25,10 @@
     </select>
     </section>
 
+
+    <div class="container countries">
     <div class="js-countries"></div>
+    </div>
 
 
     <script src="js/custom.js"></script>

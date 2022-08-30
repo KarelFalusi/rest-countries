@@ -2,25 +2,38 @@
 	box-sizing: border-box;
 }
 
+h1 {
+	font-weight: 800;
+	font-size: 24px;
+	line-height: 33px;
+}
+
+h3 {
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 26px;
+
+}
+
 body {
-    background-color: #F2F2F2;
-    color: #111517;
-    font-family: 'Nunito Sans', sans-serif;
-    margin: 0;
+	background-color: #F2F2F2;
+	color: #111517;
+	font-family: 'Nunito Sans', sans-serif;
+	margin: 0;
 }
 
 header {
 	background-color: #FFFFFF;
-	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443)
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
-.search-country {
-    display: flex;
+.container {
+	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
@@ -28,12 +41,52 @@ img {
 	max-width: 1440px;
 	padding: 30px;
 }
- .container {
-    display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;
-	margin: auto;
-	max-width: 1440px;
-	padding: 30px;
- }
+
+.search {
+	padding: 18px;
+	box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+	border-radius: 5px;
+	border: none;
+	font-size: 14px;
+	min-width: 480px;
+}
+
+.filter {
+	box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+	border-radius: 5px;
+	font-size: 14px;
+	padding: 18px;
+	border: none;
+	min-width: 200px;
+}
+
+.card {
+	box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	max-width: 264px;
+	overflow: hidden;
+	margin: 35px;
+	margin-top: 0;
+	display: inline-flex;
+}
+
+.card img {
+	height: 175px;
+	width: 100%;
+}
+
+
+
+
+.countries-info {
+	padding: 20px;
+}
+
+.countries-info p {
+	margin-bottom: 8px;
+}
+
+.countries-info h3 {
+	margin-bottom: 16px;
+}

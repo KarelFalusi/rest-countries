@@ -29,6 +29,8 @@ function displayCountries(countries) {
   
   countries.forEach(country => {
     const countryEl = document.createElement('div');
+    countryEl.classList.add('card');
+
     countryEl.innerHTML = `
     <div>
       <img src="${country.flags.png}" alt=""/>
@@ -37,15 +39,15 @@ function displayCountries(countries) {
     <h3>${country.name.common}</h3>
     <p>
 
-    Population: ${country.population}
+    <strong>Population:</strong> ${country.population}
     </p>
     <p>
 
-    Region: ${country.region}
+    <strong>Region:</strong> ${country.region}
     </p>
     <p>
 
-    Capital: ${country.capital}
+    <strong>Capital:</strong> ${country.capital}
     </p>
     </div>
     
