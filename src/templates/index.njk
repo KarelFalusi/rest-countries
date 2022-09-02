@@ -11,23 +11,25 @@
             <p>Dark Mode</p>
         </div>
     </header>
-    <section class="container">
-    <form>
-        <input type="text" name="search" class="search" id="inputSearch" placeholder="Search for a country..."/>
-    </form>
-    <select class="filter">
-        <option value="Filter">Filter by Region</option>
-        <option value="Africa">Africa</option>
-        <option value="America">America</option>
-        <option value="Asia">Asia</option>
-        <option value="Europe">Europe</option>
-        <option value="Oceania">Oceania</option>
-    </select>
-    </section>
+
+
+    <section>
+        <div class="container">
+            <input id="search" class="search" type="text" placeholder="Search for a country"/>
+
+            <select class="filter">
+                    <option value="All">Select All</option>
+                    <option value="Africa" id="africa">Africa</option>
+                    <option value="Americas" id="americas">America</option>
+                    <option value="Asia" id="asia">Asia</option>
+                    <option value="Europe" id="europe">Europe</option>
+                    <option value="Oceania" id="oceania">Oceania</option>
+			</select>
 
 
     <div class="container countries">
-    <div class="js-countries"></div>
+        <div class="js-countries"></div>
+		<div class="country-region"></div>
     </div>
 
 
