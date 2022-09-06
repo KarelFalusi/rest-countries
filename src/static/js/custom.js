@@ -45,7 +45,7 @@ function displayCountries(countries) {
 
   countries.forEach(country => {
     const countryEl = document.createElement('a');
-    countryEl.href = '/detail';
+    countryEl.href = `/detail?${country.cca3}`;
     countryEl.classList.add('card');
 
     countryEl.innerHTML = `
