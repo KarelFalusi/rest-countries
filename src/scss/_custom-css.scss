@@ -15,6 +15,13 @@ h3 {
 
 }
 
+h2 {
+	font-weight: 800;
+	font-size: 32px;
+	line-height: 44px;
+
+}
+
 body {
 	background-color: #F2F2F2;
 	color: #111517;
@@ -89,4 +96,24 @@ img {
 
 .countries-info h3 {
 	margin-bottom: 16px;
+}
+
+
+.detail img {
+	border-radius: 5px;
+    width: 559px;
+    height: auto;
+}
+
+.detail {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+	background:#FFFFFF;
+}
+
+
+.detail-body {
+	margin-top: 80px;
 }

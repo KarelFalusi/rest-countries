@@ -6,18 +6,30 @@ const regionFilters = document.querySelector('select');
 let allCountries;
 
 
-const urlToFetch = 'https://restcountries.com/v3.1/all';                                        
+const urlToFetch = 'https://restcountries.com/v3.1/all';
 const getCountries = async () => {
   try {
     const response = await fetch(urlToFetch);
     if (response.ok) {
       const countries = await response.json();
-      
-      
+
+
       console.log(countries);
-      allCountries = countries;  /*google jak seradit*/
-      filterData()
+      allCountries = countries.sort((a, b) => {
+        const nameA = a.name.common.toUpperCase(); 
+        const nameB = b.name.common.toUpperCase();
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
       
+        return 0;
+      });
+      
+      filterData()
+
     }
 
   } catch (error) {
@@ -30,9 +42,10 @@ getCountries();
 
 function displayCountries(countries) {
   countriesContainer.innerHTML = '';
-  
+
   countries.forEach(country => {
-    const countryEl = document.createElement('div');
+    const countryEl = document.createElement('a');
+    countryEl.href = '/detail';
     countryEl.classList.add('card');
 
     countryEl.innerHTML = `
@@ -64,12 +77,21 @@ function displayCountries(countries) {
 function filterData() {
   let filteredCountries = allCountries.filter(country => {
     return regionFilters.value === country.region || regionFilters.value === 'All'
+  }).filter(country => {
+    return inputSearch.value === '' || country.name.common.toLowerCase().includes(inputSearch.value.toLowerCase())
   })
   displayCountries(filteredCountries);
 };
 
 
 regionFilters.addEventListener('input', () => {
-      filterData()
-		
-	});
+  filterData()
+
+});
+
+
+
+inputSearch.addEventListener('input', () => {
+  filterData()
+
+});
