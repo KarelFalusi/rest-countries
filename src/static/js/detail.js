@@ -54,10 +54,10 @@ function showCountryDetails(country) {
         </p>
         <p>
             <strong>Border Countries:</strong>
-            ${country.borders.map(c => `
+            ${country.borders ? country.borders.map(c => `
             <a href="/detail?${c}"
             class="border-country">${c}</a>
-            `).join("")}
+            `).join("") : "none"}
         </p>
     `;
     
