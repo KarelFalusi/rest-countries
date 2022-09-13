@@ -32,6 +32,8 @@ body {
 header {
 	background-color: #FFFFFF;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+	max-width: 1440px;
+    margin: auto;
 }
 
 img {
@@ -41,12 +43,12 @@ img {
 
 .container {
 	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;
-	margin: auto;
-	max-width: 1440px;
-	padding: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 15px;
+    margin-bottom: 25px;
 }
 
 .search {
@@ -71,18 +73,26 @@ img {
 	box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
 	border-radius: 5px;
 	background-color: #FFFFFF;
-	max-width: 264px;
-	overflow: hidden;
-	margin: 35px;
-	margin-top: 0;
-	display: inline-flex;
+    width: 264px;
+    overflow: hidden;
+	text-decoration: none;
+	
 }
 
 .card img {
 	height: 175px;
 	width: 100%;
+	object-fit: contain;
 }
 
+.js-countries {
+	display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 1440px;
+    justify-content: center;
+	gap: 4.8rem;
+}
 
 
 
