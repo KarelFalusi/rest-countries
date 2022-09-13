@@ -4,18 +4,24 @@ const detail = document.getElementById('detail');
 async function getCountry() {
 	const res = await fetch(`https://restcountries.com/v3.1/alpha/${document.location.search.slice(1)}`);
 	const country = await res.json();
+    let borderCountries
+     if (country[0].borders) {
+        const res2 = await fetch(`https://restcountries.com/v3.1/alpha?codes=${country[0].borders.join(",")}`);
+        borderCountries = await res2.json();
+     };
+   
 
-	showCountryDetails(country[0]);
-}
+	showCountryDetails(country[0],borderCountries);
+};
 
 getCountry()
 
 
 
-function showCountryDetails(country) {
+function showCountryDetails(country, borderCountries) {
 	const detailBody = detail.querySelector('.detail-body');
 	const detailImg = detail.querySelector('img');
-    console.log(country)
+    console.log(country,borderCountries)
 	detailImg.src = country.flags.png;
 
 	detailBody.innerHTML = `
@@ -54,9 +60,9 @@ function showCountryDetails(country) {
         </p>
         <p>
             <strong>Border Countries:</strong>
-            ${country.borders ? country.borders.map(c => `
-            <a href="/detail?${c}"
-            class="border-country">${c}</a>
+            ${borderCountries ? borderCountries.map(c => `
+            <a href="/detail?${c.cca3}"
+            class="border-country">${c.name.common}</a>
             `).join("") : "none"}
         </p>
     `;

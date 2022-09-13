@@ -64,7 +64,7 @@ function displayCountries(countries) {
     </p>
     
     <p>
-    <strong>Capital:</strong> ${country.capital}
+    <strong>Capital:</strong> ${country.capital ?? "none"}
     </p>
     </div>
     
