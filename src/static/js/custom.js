@@ -1,10 +1,7 @@
-
-
 const countriesContainer = document.querySelector(".js-countries");
-const inputSearch = document.querySelector("#search")
+const inputSearch = document.querySelector("#search");
 const regionFilters = document.querySelector('select');
 let allCountries;
-
 
 const urlToFetch = 'https://restcountries.com/v3.1/all';
 const getCountries = async () => {
@@ -12,11 +9,9 @@ const getCountries = async () => {
     const response = await fetch(urlToFetch);
     if (response.ok) {
       const countries = await response.json();
-
-
       console.log(countries);
       allCountries = countries.sort((a, b) => {
-        const nameA = a.name.common.toUpperCase(); 
+        const nameA = a.name.common.toUpperCase();
         const nameB = b.name.common.toUpperCase();
         if (nameA < nameB) {
           return -1;
@@ -24,10 +19,10 @@ const getCountries = async () => {
         if (nameA > nameB) {
           return 1;
         }
-      
+
         return 0;
       });
-      
+
       filterData()
 
     }
@@ -42,7 +37,6 @@ getCountries();
 
 function displayCountries(countries) {
   countriesContainer.innerHTML = '';
-
   countries.forEach(country => {
     const countryEl = document.createElement('a');
     countryEl.href = `/detail?${country.cca3}`;
@@ -72,7 +66,7 @@ function displayCountries(countries) {
 
     countriesContainer.appendChild(countryEl)
   });
-}
+};
 
 function filterData() {
   let filteredCountries = allCountries.filter(country => {
@@ -88,8 +82,6 @@ regionFilters.addEventListener('input', () => {
   filterData()
 
 });
-
-
 
 inputSearch.addEventListener('input', () => {
   filterData()

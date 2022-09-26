@@ -1,33 +1,29 @@
 const detail = document.getElementById('detail');
 const backBtn = document.querySelector(".js-back-btn");
-
 backBtn.addEventListener("click", () => history.back());
 
-
 async function getCountry() {
-	const res = await fetch(`https://restcountries.com/v3.1/alpha/${document.location.search.slice(1)}`);
-	const country = await res.json();
+    const res = await fetch(`https://restcountries.com/v3.1/alpha/${document.location.search.slice(1)}`);
+    const country = await res.json();
     let borderCountries
-     if (country[0].borders) {
+    if (country[0].borders) {
         const res2 = await fetch(`https://restcountries.com/v3.1/alpha?codes=${country[0].borders.join(",")}`);
         borderCountries = await res2.json();
-     };
-   
+    };
 
-	showCountryDetails(country[0],borderCountries);
+    showCountryDetails(country[0], borderCountries);
 };
 
-getCountry()
+getCountry();
 
 
 
 function showCountryDetails(country, borderCountries) {
-	const detailBody = detail.querySelector('.detail-body');
-	const detailImg = detail.querySelector('img');
-    console.log(country,borderCountries)
-	detailImg.src = country.flags.png;
+    const detailBody = detail.querySelector('.detail-body');
+    const detailImg = detail.querySelector('img');
+    detailImg.src = country.flags.png;
 
-	detailBody.innerHTML = `
+    detailBody.innerHTML = `
         <h2>${country.name.common}</h2>
         <p>
             <strong>Native Name:</strong>
@@ -69,5 +65,4 @@ function showCountryDetails(country, borderCountries) {
             `).join("") : "none"}
         </div>
     `;
-    
-}
+};

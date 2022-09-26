@@ -114,9 +114,11 @@ img {
 	color: #111517;
 	padding: 1.25rem;
 }
+
 .countries-info p {
 	margin-bottom: 0.5rem;
 }
+
 .countries-info h3 {
 	margin-bottom: 1rem;
 }
@@ -128,6 +130,7 @@ img {
 	align-items: flex-start;
 	gap: 4rem;
 }
+
 .detail img {
 	border-radius: 5px;
 	box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.0294384);
@@ -138,8 +141,9 @@ img {
 .detail-body {
 	font-size: 1rem;
 	line-height: 2rem;
-	
+
 }
+
 .detail-body p {
 	margin-bottom: 0.5rem;
 }
@@ -150,7 +154,7 @@ img {
 	box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.104931);
 	border-radius: 2px;
 	padding: 0.1875rem 0.5rem;
-    margin-bottom: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 
@@ -167,7 +171,7 @@ img {
 	height: 40px;
 	padding-top: 0;
 	margin-bottom: 3.375rem;
-    margin-top: 1.875rem;
+	margin-top: 1.875rem;
 }
 
 .js-toggler__text {
@@ -175,28 +179,29 @@ img {
 	font-weight: 600;
 	line-height: 1.375rem;
 	margin-top: 0.5rem;
-    margin-bottom: 0.7rem;
+	margin-bottom: 0.7rem;
 	cursor: pointer;
 }
 
 .arrow {
 	font-size: 1.8rem;
-    padding: 0.3125rem;
-    top: 3.77%;
-    right: 6%;
-    position: relative;
+	padding: 0.3125rem;
+	top: 3.77%;
+	right: 6%;
+	position: relative;
 }
 
 .js-border-header {
 	display: inline;
 	font-size: 1rem;
-    font-weight: 600;
-    line-height: 1.5rem;
-    margin-right: 1rem;
+	font-weight: 600;
+	line-height: 1.5rem;
+	margin-right: 1rem;
 }
 
 
 .dark-mode {
+
 	header,
 	.search,
 	.filter,
@@ -207,15 +212,16 @@ img {
 		color: #FFFFFF;
 		background-color: #2B3844;
 	}
-	
+
 	.detail-body,
 	a {
 		color: #FFFFFF;
 	}
+
 	.search::placeholder {
 		color: #b3b3b3;
 	}
-	
+
 	background-color: #202C36;
 }
 
@@ -224,24 +230,29 @@ img {
 		font-size: 0.875rem;
 		line-height: 1.25rem;
 	}
+
 	.js-toggler__text {
 		font-size: 0.75rem;
 		line-height: 1rem;
 	}
+
 	.filter {
 		font-size: 0.75rem;
 	}
+
 	.js-back-btn {
 		font-size: 0.875rem;
 		width: 104px;
 		height: 32px;
 	}
+
 	.arrow {
 		font-size: 1.8rem;
 		padding: 0.3125rem;
 		top: 8.77%;
 		position: relative;
 	}
+
 	.js-border-header {
 		display: block;
 	}
