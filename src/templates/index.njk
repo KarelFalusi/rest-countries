@@ -7,14 +7,15 @@
 {% block content %}
     <header>
         <div class="container">
-            <h1>Where in the world?</h1>
-            <p>Dark Mode</p>
-        </div>
+            <a href="index.html"><h1>Where in the world?</h1></a>
+            <div class="js-toggler hover">
+                    <p class="js-toggler__text"> 🌙 Dark Mode</p>
+            </div>
     </header>
 
 
-        <div class="container">
-            <input id="search" class="search" type="text" placeholder="Search for a country"/>
+        <div class="container gap-4">
+            <input id="search" class="search" type="text" placeholder="🔍 Search for a country..."/>
 
             <select class="filter">
                     <option value="All">Filter by Region</option>
@@ -26,11 +27,14 @@
 			</select>
 
 		</div>
+        <div class="container">
+        <div class="js-countries"></div>
+        </div>
 
 
     
-        <div class="js-countries"></div>
 
 
     <script src="js/custom.js"></script>
+    <script src="js/theme-toggler.js"></script>
 {% endblock %}
