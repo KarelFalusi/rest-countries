@@ -1,4 +1,7 @@
 const detail = document.getElementById('detail');
+const backBtn = document.querySelector(".js-back-btn");
+
+backBtn.addEventListener("click", () => history.back());
 
 
 async function getCountry() {
@@ -42,7 +45,7 @@ function showCountryDetails(country, borderCountries) {
             <strong>Sub Region:</strong>
             ${country.subregion ?? "none"}
         </p>
-        <p>
+        <p class="space mb-4">
             <strong>Capital:</strong>
             ${country.capital ?? "none"}
         </p>
@@ -58,13 +61,13 @@ function showCountryDetails(country, borderCountries) {
             <strong>Languages:</strong>
             ${country.languages ? Object.values(country.languages).join(", ") : "none"}
         </p>
-        <p>
-            <strong>Border Countries:</strong>
+        <div class="js-border-countries mt-5">
+            <h3 class="js-border-header">Border Countries:</h3>
             ${borderCountries ? borderCountries.map(c => `
             <a href="/detail?${c.cca3}"
             class="border-country">${c.name.common}</a>
             `).join("") : "none"}
-        </p>
+        </div>
     `;
     
 }

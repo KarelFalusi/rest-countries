@@ -7,21 +7,27 @@
 {% block content %}
     <header>
         <div class="container">
-            <h1>Where in the world?</h1>
-            <p>Dark Mode</p>
-        </div>
+            <a href="index.html"><h1>Where in the world?</h1></a>
+            <div class="js-toggler hover">
+                    <p class="js-toggler__text"> <span class="icon">🌙</span> Dark Mode</p>
+            </div>
     </header>
+
+    <main class="container">
+        <button type="button" class="btn js-back-btn hover">
+            <span class="arrow">←</span>
+            Back
+        </button>
 
 
         <div class="detail" id="detail">
-            
-				<img src="" alt="" />
-				<div class="detail-body"></div>
-			</div>
 
-
-    
+            <img src="" alt=""/>
+            <div class="detail-body"></div>
+        </div>
+    </main>
 
 
     <script src="js/detail.js"></script>
+    <script src="js/theme-toggler.js"></script>
 {% endblock %}
