@@ -60,8 +60,8 @@ function showCountryDetails(country, borderCountries) {
         <div class="js-border-countries mt-5">
             <h3 class="js-border-header">Border Countries:</h3>
             ${borderCountries ? borderCountries.map(c => `
-            <a href="/detail?${c.cca3}"
-            class="border-country">${c.name.common}</a>
+                <a href="/detail?${c.cca3}"
+                class="border-country">${c.name.common}</a>
             `).join("") : "none"}
         </div>
     `;
