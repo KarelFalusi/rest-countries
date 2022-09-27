@@ -12,28 +12,30 @@
             </a>
             <div class="js-toggler hover">
                 <p class="js-toggler__text">
-                    🌙 Dark Mode</p>
+                    🌙 Dark Mode
+                </p>
             </div>
-        </header>
-
-        <div class="container gap-4">
-            <input id="search" class="search" type="text" placeholder="🔍 Search for a country..."/>
-
-            <select class="filter">
-                <option value="All">Filter by Region</option>
-                <option value="Africa" id="africa">Africa</option>
-                <option value="Americas" id="americas">America</option>
-                <option value="Asia" id="asia">Asia</option>
-                <option value="Europe" id="europe">Europe</option>
-                <option value="Oceania" id="oceania">Oceania</option>
-            </select>
-
         </div>
-        <div class="container">
-            <div class="js-countries"></div>
-        </div>
+    </header>
+
+    <div class="container gap-4">
+        <input id="search" class="search" type="text" placeholder="🔍 Search for a country..."/>
+
+        <select class="filter">
+            <option value="All">Filter by Region</option>
+            <option value="Africa">Africa</option>
+            <option value="Americas">America</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+        </select>
+
+    </div>
+    <div class="container">
+        <div class="js-countries"></div>
+    </div>
 
 
-        <script src="js/index.js"></script>
-        <script src="js/theme-toggler.js"></script>
-    {% endblock %}
+    <script src="js/index.js"></script>
+    <script src="js/theme-toggler.js"></script>
+{% endblock %}
