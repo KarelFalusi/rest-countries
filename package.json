@@ -29,7 +29,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "browserslist --update-db && gulp develop",
     "build": "browserslist --update-db && gulp build",
-    "deploy": "browserslist --update-db && gulp build && surge dist --domain \"https://my-first-bootstrap-5-website.surge.sh\""
+    "deploy": "browserslist --update-db && gulp build && surge dist --domain \"https://rest-countries-kf.surge.sh\""
   },
   "prettier": {
     "tabWidth": 4,
